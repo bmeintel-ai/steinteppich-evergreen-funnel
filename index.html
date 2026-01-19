@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steinteppich-Sanierung: Ihr Gratis-Ratgeber | Bitschus</title>
+    <meta name="description" content="Laden Sie unseren kostenlosen Ratgeber zur Steinteppich-Sanierung herunter. Erfahren Sie alles über fugenlose, rutschfeste und langlebige Steinteppiche.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* ========== HEADER & NAVIGATION ========== */
+        header {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1428 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .phone-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .phone-link {
+                display: inline;
+            }
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            background: linear-gradient(135deg, rgba(196, 30, 58, 0.95) 0%, rgba(139, 20, 40, 0.95) 100%), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><rect width="100" height="100" fill="%23f0f0f0" opacity="0.05"/><circle cx="50" cy="50" r="40" fill="none" stroke="%23ffffff" stroke-width="1" opacity="0.1"/></pattern></defs><rect width="1200" height="600" fill="%23c41e3a"/><rect width="1200" height="600" fill="url(%23pattern)"/></svg>');
+            background-attachment: fixed;
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #fff;
+            color: #c41e3a;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: #f0f0f0;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 2.5rem 1rem;
+                min-height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 0.9rem 2rem;
+                font-size: 1rem;
+            }
+        }
+
+        /* ========== SECTION STYLES ========== */
+        section {
+            padding: 3rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #c41e3a;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        section h3 {
+            font-size: 1.3rem;
+            color: #333;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        section p {
+            margin-bottom: 1rem;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 2rem 1rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+
+            section h3 {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* ========== BENEFITS SECTION ========== */
+        .benefits {
+            background-color: white;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-card {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 5px solid #c41e3a;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(196, 30, 58, 0.15);
+        }
+
+        .benefit-card h4 {
+            color: #c41e3a;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .benefit-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* ========== APPLICATIONS SECTION ========== */
+        .applications {
+            background-color: #f9f9f9;
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .app-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .app-item:hover {
+            box-shadow: 0 4px 12px rgba(196, 30, 58, 0.12);
+        }
+
+        .app-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #c41e3a;
+        }
+
+        .app-item h4 {
+            color: #333;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .app-item p {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* ========== ABOUT SECTION ========== */
+        .about {
+            background-color: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            margin-top: 0;
+            color: #c41e3a;
+            font-size: 1.5rem;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1428 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* ========== FAQ SECTION ========== */
+        .faq {
+            background-color: #f9f9f9;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .faq-question {
+            background: #f0f0f0;
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #e8e8e8;
+            color: #c41e3a;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: #c41e3a;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            color: #666;
+            display: none;
+            border-top: 2px solid #f0f0f0;
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* ========== CTA SECTION ========== */
+        .cta-section {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1428 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button-secondary {
+            display: inline-block;
+            background: white;
+            color: #c41e3a;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: #f0f0f0;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: #222;
+            color: #ccc;
+            padding: 2rem 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #c41e3a;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            margin: 0 1rem;
+            display: inline-block;
+        }
+
+        /* ========== UTILITY CLASSES ========== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .highlight {
+            color: #c41e3a;
+            font-weight: 600;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.8rem;
+            color: #555;
+        }
+
+        ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #c41e3a;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* ========== RESPONSIVE ADJUSTMENTS ========== */
+        @media (max-width: 1024px) {
+            .about-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.3rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            section h2 {
+                font-size: 1.3rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .app-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-question {
+                padding: 1rem;
+                font-size: 0.95rem;
+            }
+
+            .faq-answer {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="logo">Bitschus</div>
+            <a href="tel:+4974415366610" class="phone-link">📞 07441 / 536610</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ihr Weg zum perfekten Steinteppich: Der ultimative Sanierungs-Ratgeber</h1>
+            <p>Entdecken Sie, wie Sie mit einem Steinteppich von Bitschus langlebige, stilvolle und pflegeleichte Oberflächen schaffen. Sichern Sie sich jetzt Ihren kostenlosen Ratgeber voller Experten-Tipps!</p>
+            <button class="cta-button" onclick="document.getElementById('form').scrollIntoView({behavior: 'smooth'})">Gratis-Ratgeber sichern</button>
+        </div>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section class="benefits">
+        <h2>Die Vorteile des Steinteppichs</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;">Ein Steinteppich von Bitschus ist mehr als nur ein Bodenbelag – er ist eine Investition in Qualität und Ästhetik. Profitieren Sie von den unschlagbaren Vorteilen:</p>
+        
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h4>✓ Fugenlos & Nahtlos</h4>
+                <p>Genießen Sie eine harmonische und durchgehende Oberfläche ohne störende Fugen, die Schmutz und Bakterien keine Chance lässt.</p>
+            </div>
+
+            <div class="benefit-card">
+                <h4>✓ UV-beständig & Farbecht</h4>
+                <p>Freuen Sie sich über brillante Farben, die auch bei starker Sonneneinstrahlung nicht verblassen.</p>
+            </div>
+
+            <div class="benefit-card">
+                <h4>✓ Rutschfest & Sicher</h4>
+                <p>Verlassen Sie sich auf höchste Trittsicherheit, selbst bei Nässe – ideal für Familien und Gewerbe.</p>
+            </div>
+
+            <div class="benefit-card">
+                <h4>✓ Pflegeleicht & Langlebig</h4>
+                <p>Sparen Sie Zeit und Mühe bei der Reinigung und profitieren Sie von einer außergewöhnlichen Widerstandsfähigkeit gegen Abnutzung.</p>
+            </div>
+
+            <div class="benefit-card">
+                <h4>✓ Wasserdurchlässig</h4>
+                <p>Verhindern Sie unschöne Pfützenbildung und schützen Sie den Untergrund effektiv vor Feuchtigkeitsschäden.</p>
+            </div>
+
+            <div class="benefit-card">
+                <h4>✓ Außergewöhnliche Langlebigkeit</h4>
+                <p>Bei richtiger Pflege bietet unser Steinteppich eine außergewöhnliche Lebensdauer – eine echte Langzeitinvestition.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPLICATIONS SECTION -->
+    <section class="applications">
+        <h2>Einsatzbereiche</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;">Ob im Innen- oder Außenbereich, für private oder gewerbliche Flächen – ein Steinteppich ist die vielseitige und langlebige Lösung.</p>
+        
+        <div class="app-grid">
+            <div class="app-item">
+                <div class="app-icon">🏠</div>
+                <h4>Balkon & Terrasse</h4>
+                <p>Verwandeln Sie Ihren Außenbereich in eine stilvolle Wohlfühloase mit rutschfesten und wasserdurchlässigen Oberflächen.</p>
+            </div>
+
+            <div class="app-item">
+                <div class="app-icon">🪜</div>
+                <h4>Treppensanierung</h4>
+                <p>Machen Sie aus alten Treppen wieder sichere und moderne Hingucker – innen wie außen.</p>
+            </div>
+
+            <div class="app-item">
+                <div class="app-icon">🛋️</div>
+                <h4>Wohn- & Innenbereiche</h4>
+                <p>Schaffen Sie ein einzigartiges und pflegeleichtes Ambiente in Wohnräumen, Bädern oder Büros.</p>
+            </div>
+
+            <div class="app-item">
+                <div class="app-icon">🌳</div>
+                <h4>Außenbereiche</h4>
+                <p>Gestalten Sie Wege, Einfahrten und Poolumrandungen edel und witterungsbeständig.</p>
+            </div>
+
+            <div class="app-item">
+                <div class="app-icon">🏢</div>
+                <h4>Gewerbeflächen</h4>
+                <p>Robuste und ästhetische Lösungen für Garagen, Keller und gewerbliche Außenflächen.</p>
+            </div>
+
+            <div class="app-item">
+                <div class="app-icon">📍</div>
+                <h4>Region Freudenstadt & Rottweil</h4>
+                <p>Ihr regionaler Ansprechpartner – schnell vor Ort und mit umfassender lokaler Expertise.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about">
+        <h2>Über Bitschus</h2>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Handwerkskunst trifft modernes Design</h3>
+                <p>Seit über 15 Jahren steht Bitschus für Handwerkskunst, Präzision und Leidenschaft. Mit Sitz in Freudenstadt verbinden wir traditionelle Werte mit modernsten Materialien, um fugenlose Oberflächen von höchster Qualität zu schaffen.</p>
+                <p>Unser Ziel ist es, Ihr Zuhause oder Ihr Gewerbeobjekt mit langlebigen, ästhetischen und pflegeleichten Steinteppich-Lösungen aufzuwerten, die auf Schritt und Tritt überzeugen.</p>
+                <p><strong>Ihre Experten in der Region Freudenstadt & Rottweil:</strong> Wir kennen die lokalen Gegebenheiten und sind schnell für Sie vor Ort.</p>
+            </div>
+
+            <div class="about-stats">
+                <div class="stat-box">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Jahre Erfahrung</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">5.000+</div>
+                    <div class="stat-label">m² verlegt</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Projekte in BW</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Kundenzufriedenheit</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq">
+        <h2>Häufig gestellte Fragen</h2>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <span>Wie lange dauert die Verlegung eines Steinteppichs?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Die Dauer hängt von der Größe und dem Zustand des Untergrunds ab. In der Regel ist ein Balkon oder eine Terrasse innerhalb von 2-3 Tagen fertiggestellt. Größere Projekte können entsprechend länger dauern. Wir besprechen den genauen Zeitplan gerne mit Ihnen in der kostenlosen Erstberatung.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <span>Ist ein Steinteppich wirklich rutschfest?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Ja, absolut! Durch die offenporige Struktur bietet ein Steinteppich auch bei Nässe eine hohe Trittsicherheit und ist somit ideal für Außenbereiche, Bäder und Treppen. Die Rutschfestigkeit ist zertifiziert und erfüllt höchste Sicherheitsstandards.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <span>Wie reinige ich einen Steinteppich?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Die Reinigung ist denkbar einfach: Im Innenbereich genügt regelmäßiges Saugen und gelegentliches Wischen mit einem feuchten Tuch. Im Außenbereich können Sie einfach einen Gartenschlauch oder Hochdruckreiniger (mit entsprechendem Abstand) verwenden. Wir geben Ihnen gerne detaillierte Pflegeanweisungen mit.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <span>Kann ein Steinteppich auf alten Fliesen verlegt werden?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>In den meisten Fällen ja! Nach einer gründlichen Prüfung und Vorbereitung des Untergrunds kann der Steinteppich direkt auf die vorhandenen Fliesen aufgetragen werden, was Zeit und Kosten spart. Dies ist eine große Vorteil gegenüber kompletten Sanierungen.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <span>Welche Farben und Designs sind möglich?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Die Auswahl ist riesig! Von klassischen Grautönen über warme Beige- und Brauntöne bis hin zu modernen Schwarz- und Weißtönen – wir bieten eine Vielzahl an Farben und Designs. Gerne zeigen wir Ihnen in unserer Beratung Muster und Referenzen.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <span>Wie lange hält ein Steinteppich?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Bei richtiger Pflege und Handhabung bietet unser Steinteppich eine außergewöhnliche Langlebigkeit von 15-20+ Jahren, teilweise sogar länger. Das macht ihn zu einer echten Langzeitinvestition, die sich wirtschaftlich sehr lohnt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <h2>Bereit für Ihren neuen Traum-Boden?</h2>
+        <p>Sichern Sie sich jetzt Ihren kostenlosen Ratgeber und erfahren Sie alles, was Sie über Steinteppiche wissen müssen!</p>
+        <button class="cta-button-secondary" onclick="document.getElementById('form').scrollIntoView({behavior: 'smooth'})">Gratis-Ratgeber sichern</button>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <section id="form" style="background-color: white;">
+        <h2>Kostenlos Ratgeber anfordern</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;">Füllen Sie das Formular aus und erhalten Sie sofort Ihren kostenlosen Steinteppich-Ratgeber per E-Mail. Keine versteckten Gebühren – völlig kostenlos!</p>
+        
+        <form style="max-width: 600px; margin: 0 auto; background: #f9f9f9; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
+            <div style="margin-bottom: 1.5rem;">
+                <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Name *</label>
+                <input type="text" id="name" name="name" placeholder="Ihr Name" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">E-Mail *</label>
+                <input type="email" id="email" name="email" placeholder="ihre@email.de" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <label for="plz" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">PLZ *</label>
+                <input type="text" id="plz" name="plz" placeholder="72250" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <label for="projektart" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Interessiert an (optional)</label>
+                <select id="projektart" name="projektart" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                    <option value="">Bitte wählen...</option>
+                    <option value="balkon">Balkon-Sanierung</option>
+                    <option value="treppe">Treppensanierung</option>
+                    <option value="innenbereich">Innenbereich</option>
+                    <option value="außenbereich">Außenbereich</option>
+                    <option value="sonstiges">Sonstiges</option>
+                </select>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <label for="nachricht" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Ihre Nachricht (optional)</label>
+                <textarea id="nachricht" name="nachricht" placeholder="Beschreiben Sie kurz Ihr Projekt..." rows="4" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; font-family: inherit;"></textarea>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: flex; align-items: center; font-size: 0.9rem; color: #666;">
+                    <input type="checkbox" name="datenschutz" required style="margin-right: 0.5rem; width: 18px; height: 18px; cursor: pointer;">
+                    Ich akzeptiere die Datenschutzerklärung *
+                </label>
+            </div>
+
+            <button type="submit" style="width: 100%; background: linear-gradient(135deg, #c41e3a 0%, #8b1428 100%); color: white; padding: 1rem; border: none; border-radius: 50px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);">Ratgeber kostenlos erhalten</button>
+
+            <p style="text-align: center; font-size: 0.85rem; color: #999; margin-top: 1rem;">Ihre Daten sind sicher bei uns. Wir geben Ihre Informationen nicht an Dritte weiter.</p>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#impressum">Impressum</a>
+                <a href="#datenschutz">Datenschutz</a>
+                <a href="#agb">AGB</a>
+            </div>
+            <p>&copy; 2024 Bitschus GmbH – Steinteppiche & Sanierung Freudenstadt. Alle Rechte vorbehalten.</p>
+            <p style="margin-top: 1rem; font-size: 0.85rem;">
+                📞 <a href="tel:+4974415366610">07441 / 536610</a> | 
+                📧 <a href="mailto:info@bitschus.de">info@bitschus.de</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for CTA buttons
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Vielen Dank! Ihr Ratgeber wird in Kürze an Ihre E-Mail-Adresse versendet.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
